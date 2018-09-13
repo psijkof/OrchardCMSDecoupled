@@ -3,7 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrchardCMS", "OrchardCMS\OrchardCMS.csproj", "{D465B0CB-78DE-43E8-92BD-056CAB2B8BD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardCMS", "OrchardCMS\OrchardCMS.csproj", "{D465B0CB-78DE-43E8-92BD-056CAB2B8BD2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution items", "{7A69AB87-23D5-482C-862D-4E2E7ABB86B8}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet.Config = NuGet.Config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanillaRazorPagesApp", "VanillaRazorPagesApp\VanillaRazorPagesApp.csproj", "{1D8380AA-7C3C-421E-AAF9-277364C3BC68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +22,10 @@ Global
 		{D465B0CB-78DE-43E8-92BD-056CAB2B8BD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D465B0CB-78DE-43E8-92BD-056CAB2B8BD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D465B0CB-78DE-43E8-92BD-056CAB2B8BD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D8380AA-7C3C-421E-AAF9-277364C3BC68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8380AA-7C3C-421E-AAF9-277364C3BC68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8380AA-7C3C-421E-AAF9-277364C3BC68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8380AA-7C3C-421E-AAF9-277364C3BC68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
