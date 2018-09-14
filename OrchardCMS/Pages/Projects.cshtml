@@ -1,44 +1,31 @@
 ﻿@page
-
-@inject IOrchardHelper OrchardHelper
-
+@inject IOrchardHelper Orchard
 @model OrchardCMS.Pages.ProjectsModel
-
 @{
     ViewData["Title"] = "Projects";
-}
 
-<h1>Our project offerings: (lucene queries)</h1>
-@{
+    <h1>Our project offerings: (lucene queries)</h1>
     <strong>Query name: ProjectsAll</strong>
-
-    foreach (dynamic projectItem in await OrchardHelper.QueryAsync("ProjectsAll"))
+    foreach (dynamic projectItem in await Orchard.QueryAsync("ProjectsAll"))
     {
-        <partial name="Shared/RenderFigure" model="@await OrchardHelper.GetContentItemByIdAsync((string)projectItem.ContentItemId)" />
+        <partial name="Shared/RenderFigure" model="@await Orchard.GetContentItemByIdAsync((string)projectItem.ContentItemId)" />
     }
-}
 
-@{
     <strong>Query: ProjectsAllItems return ContentItems</strong>
-    foreach (dynamic projectItem in await OrchardHelper.QueryAsync("ProjectsAllItems"))
+    foreach (dynamic projectItem in await Orchard.QueryAsync("ProjectsAllItems"))
     {
         <partial name="Shared/RenderFigure" model="@projectItem" />
     }
-}
-<h1>Our project offerings: (sql queries)</h1>
 
-@{
+    <h1>Our project offerings: (sql queries)</h1>
     <strong>Query name: ProjectsAllSQL return Ids and meta</strong>
-
-    foreach (dynamic projectItem in await OrchardHelper.QueryAsync("ProjectsAllSQL"))
+    foreach (dynamic projectItem in await Orchard.QueryAsync("ProjectsAllSQL"))
     {
-        <partial name="Shared/RenderFigure" model="@await OrchardHelper.GetContentItemByIdAsync((string)projectItem.ContentItemId)" />
+        <partial name="Shared/RenderFigure" model="@await Orchard.GetContentItemByIdAsync((string)projectItem.ContentItemId)" />
     }
-}
 
-@{
     <strong>Query: ProjectsAllItemsSQL return ContentItems</strong>
-    foreach (dynamic projectItem in await OrchardHelper.QueryAsync("ProjectsAllItemsSQL"))
+    foreach (dynamic projectItem in await Orchard.QueryAsync("ProjectsAllItemsSQL"))
     {
         <partial name="Shared/RenderFigure" model="@projectItem" />
     }
