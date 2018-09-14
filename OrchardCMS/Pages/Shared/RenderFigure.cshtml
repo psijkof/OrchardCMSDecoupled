@@ -1,0 +1,7 @@
+﻿@model dynamic
+@inject IOrchardHelper Orchard
+
+<figure>
+    <img asset-src="@Model.Content.Project.Logo.Paths[0]" img-width="100" img-height="75" img-resize-mode="Crop" />
+    <figcaption><i>fig. @Model.ContentItemId</i> @Model.DisplayText</figcaption>
+</figure>

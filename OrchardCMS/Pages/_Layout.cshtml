@@ -1,0 +1,18 @@
+﻿@inject OrchardCore.IOrchardHelper Orchard
+
+<!DOCTYPE html>
+
+<html lang="@(Orchard.CultureName())" dir="@Orchard.CultureDir()" >
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        &copy; @DateTime.Now.Year Orchard Core Team
+    </footer>
+</body>
+</html>

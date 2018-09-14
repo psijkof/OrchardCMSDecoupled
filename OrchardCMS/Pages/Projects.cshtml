@@ -10,41 +10,36 @@
 
 <h1>Our project offerings: (lucene queries)</h1>
 @{
-    // Query name: ProjectsAll
+    <strong>Query name: ProjectsAll</strong>
 
-    foreach (dynamic project in await OrchardHelper.QueryAsync("ProjectsAll"))
+    foreach (dynamic projectItem in await OrchardHelper.QueryAsync("ProjectsAll"))
     {
-        <p>
-            @project.ContentItemId
-        </p>
+        <partial name="Shared/RenderFigure" model="@await OrchardHelper.GetContentItemByIdAsync((string)projectItem.ContentItemId)" />
     }
 }
 
 @{
-    //Query: ProjectsAllItems
+    <strong>Query: ProjectsAllItems return ContentItems</strong>
     foreach (dynamic projectItem in await OrchardHelper.QueryAsync("ProjectsAllItems"))
     {
-        var path = (projectItem.Content.Project.Logo.Paths[0]);
-        <img src="@OrchardHelper.AssetUrl((string)path,400,300, OrchardCore.Media.Processing.ResizeMode.Crop)" />
+        <partial name="Shared/RenderFigure" model="@projectItem" />
     }
 }
 <h1>Our project offerings: (sql queries)</h1>
 
 @{
-    <div>Query name: ProjectsAllSQL</div>
+    <strong>Query name: ProjectsAllSQL return Ids and meta</strong>
 
-    foreach (dynamic project in await OrchardHelper.QueryAsync("ProjectsAllSQL"))
+    foreach (dynamic projectItem in await OrchardHelper.QueryAsync("ProjectsAllSQL"))
     {
-        <p>
-            @project.DisplayText
-        </p>
+        <partial name="Shared/RenderFigure" model="@await OrchardHelper.GetContentItemByIdAsync((string)projectItem.ContentItemId)" />
     }
 }
 
 @{
-    <div> Query: ProjectsAllItemsSQL</div>
+    <strong>Query: ProjectsAllItemsSQL return ContentItems</strong>
     foreach (dynamic projectItem in await OrchardHelper.QueryAsync("ProjectsAllItemsSQL"))
     {
-        <img src="@OrchardHelper.AssetUrl((string)projectItem.Content.Project.Logo.Paths[0],400,300, OrchardCore.Media.Processing.ResizeMode.Crop)" />
+        <partial name="Shared/RenderFigure" model="@projectItem" />
     }
 }
