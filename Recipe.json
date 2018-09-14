@@ -1,0 +1,372 @@
+{
+  "name": "",
+  "displayName": "",
+  "description": "",
+  "author": "",
+  "website": "",
+  "version": "",
+  "issetuprecipe": false,
+  "categories": "",
+  "tags": [],
+  "steps": [
+    {
+      "name": "ContentDefinition",
+      "ContentTypes": [
+        {
+          "Name": "Menu",
+          "DisplayName": "Menu",
+          "Settings": {
+            "Draftable": "True",
+            "Versionable": "True",
+            "Creatable": "True",
+            "Listable": "True"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "Position": "1"
+              }
+            },
+            {
+              "PartName": "AliasPart",
+              "Name": "AliasPart",
+              "Settings": {
+                "Position": "2",
+                "AliasPartSettings": {
+                  "Pattern": "{{ ContentItem | display_text | slugify }}"
+                }
+              }
+            },
+            {
+              "PartName": "MenuPart",
+              "Name": "MenuPart",
+              "Settings": {
+                "Position": "3"
+              }
+            },
+            {
+              "PartName": "MenuItemsListPart",
+              "Name": "MenuItemsListPart",
+              "Settings": {
+                "Position": "4"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "LinkMenuItem",
+          "DisplayName": "Link Menu Item",
+          "Settings": {
+            "Stereotype": "MenuItem"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "LinkMenuItemPart",
+              "Name": "LinkMenuItemPart",
+              "Settings": {}
+            }
+          ]
+        },
+        {
+          "Name": "Project",
+          "DisplayName": "Project",
+          "Settings": {
+            "Creatable": "True",
+            "Draftable": "True",
+            "Versionable": "True",
+            "Listable": "True",
+            "Securable": "True",
+            "Stereotype": null
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Project",
+              "Name": "Project",
+              "Settings": {
+                "Position": "1"
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "Position": "0"
+              }
+            }
+          ]
+        }
+      ],
+      "ContentParts": [
+        {
+          "Name": "AliasPart",
+          "Settings": {
+            "Attachable": "True",
+            "Description": "Provides a way to define custom aliases for content items."
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "AutoroutePart",
+          "Settings": {
+            "Attachable": "True",
+            "Description": "Provides a custom url for your content item."
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "FlowPart",
+          "Settings": {
+            "Attachable": "True",
+            "Description": "Provides a customizable body for your content item."
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "BagPart",
+          "Settings": {
+            "Attachable": "True",
+            "Reusable": "True",
+            "Description": "Provides a collection behavior for your content item."
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "WidgetsListPart",
+          "Settings": {
+            "Attachable": "True",
+            "Description": "Provides a way to add widgets per content items."
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "Attachable": "True",
+            "Description": "Provides an HTML Body for your content item."
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "ListPart",
+          "Settings": {
+            "Attachable": "True",
+            "Description": "Add a list behavior."
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "MarkdownBodyPart",
+          "Settings": {
+            "Attachable": "True",
+            "Description": "Provides a Markdown formatted body for your content item."
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "TitlePart",
+          "Settings": {
+            "Attachable": "True",
+            "Description": "Provides a Title for your content item."
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "CommonPart",
+          "Settings": {
+            "Attachable": "True",
+            "Description": "Provides an editor for the common properties of a content item."
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "LiquidPart",
+          "Settings": {
+            "Attachable": "True",
+            "Description": "Provides a Liquid formatted body for your content item."
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "Project",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "NumericField",
+              "Name": "DefaultPrice",
+              "Settings": {
+                "DisplayName": "DefaultPrice",
+                "Editor": null,
+                "Hint": "Default price of the project",
+                "Required": false,
+                "Scale": 0,
+                "Minimum": 100.0,
+                "Maximum": null,
+                "Placeholder": "min. 100",
+                "DefaultValue": "100",
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "0"
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "Logo",
+              "Settings": {
+                "DisplayName": "Logo",
+                "Position": "1"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "content",
+      "data": [
+        {
+          "ContentItemId": "4nm3nv2ch0dedshj93ww0j8f4j",
+          "ContentItemVersionId": "48kpk28cn2y304g7qwgdbhyrwt",
+          "ContentType": "Project",
+          "DisplayText": "Standard 4 page web iste",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-13T10:35:50.4172995Z",
+          "PublishedUtc": "2018-09-13T10:35:50.5326902Z",
+          "CreatedUtc": "2018-09-13T10:35:50.5326902Z",
+          "Owner": "Admin",
+          "Author": "Admin",
+          "Project": {
+            "DefaultPrice": {
+              "Value": 1000.0
+            },
+            "Logo": {
+              "Paths": [
+                "project logos/RWg9Rn_1920x1080.jpg"
+              ]
+            }
+          },
+          "TitlePart": {
+            "Title": "Standard 4 page web iste"
+          }
+        },
+        {
+          "ContentItemId": "4vtxw04fpvz5e1endykzdqe0mt",
+          "ContentItemVersionId": "49fk52asx72cz1r6vxxjh63mnr",
+          "ContentType": "Project",
+          "DisplayText": "Simple web shop shit with minimal customization",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-13T15:44:15.9266395Z",
+          "PublishedUtc": "2018-09-13T15:44:16.1094948Z",
+          "CreatedUtc": "2018-09-13T15:44:16.1094948Z",
+          "Owner": "Admin",
+          "Author": "Admin",
+          "Project": {
+            "DefaultPrice": {
+              "Value": 3000.0
+            },
+            "Logo": {
+              "Paths": [
+                "project logos/RE1LDMI_1920x1080.jpg"
+              ]
+            }
+          },
+          "TitlePart": {
+            "Title": "Simple web shop shit with minimal customization"
+          }
+        },
+        {
+          "ContentItemId": "47025x52g6cjjv2k8fmsv21zmp",
+          "ContentItemVersionId": "4tea2deazpryw12z281qvjtanb",
+          "ContentType": "Project",
+          "DisplayText": "Customized commerce application with extendable support offering",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-13T15:58:45.031847Z",
+          "PublishedUtc": "2018-09-13T15:58:45.2011417Z",
+          "CreatedUtc": "2018-09-13T15:58:45.2011417Z",
+          "Owner": "Admin",
+          "Author": "Admin",
+          "Project": {
+            "DefaultPrice": {
+              "Value": 5000.0
+            },
+            "Logo": {
+              "Paths": [
+                "project logos/RE1MJwN_1920x1080.jpg"
+              ]
+            }
+          },
+          "TitlePart": {
+            "Title": "Customized commerce application with extendable support offering"
+          }
+        },
+        {
+          "ContentItemId": "4gafn4bf3mqryzbm83z8ptj6w0",
+          "ContentItemVersionId": "4hc13xszpfgd30pm9ndcwdmmdy",
+          "ContentType": "Project",
+          "DisplayText": "Fully customized web app with extendable support offering",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-13T17:40:52.3933644Z",
+          "PublishedUtc": "2018-09-13T17:40:52.5175358Z",
+          "CreatedUtc": "2018-09-13T17:40:52.5175358Z",
+          "Owner": "Admin",
+          "Author": "Admin",
+          "Project": {
+            "DefaultPrice": {
+              "Value": 7500.0
+            },
+            "Logo": {
+              "Paths": [
+                "project logos/RWiYek_1920x1080.jpg"
+              ]
+            }
+          },
+          "TitlePart": {
+            "Title": "Fully customized web app with extendable support offering"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Queries",
+      "Queries": [
+        {
+          "Index": "Search",
+          "Template": "{\r\n  \"query\": {\r\n    \"term\" : { \"Content.ContentItem.ContentType\" : \"Project\" } \r\n  },\r\n  \"sort\": { \"Content.ContentItem.DefaultPrice\": { \"order\": \"desc\" } }\r\n}",
+          "ReturnContentItems": false,
+          "Name": "ProjectsAll",
+          "Source": "Lucene"
+        },
+        {
+          "Index": "Search",
+          "Template": "{\r\n  \"query\": {\r\n    \"term\" : { \"Content.ContentItem.ContentType\" : \"Project\" } \r\n  },\r\n  \"sort\": { \"Content.ContentItem.DefaultPrice\": { \"order\": \"desc\" } }\r\n}",
+          "ReturnContentItems": true,
+          "Name": "ProjectsAllItems",
+          "Source": "Lucene"
+        },
+        {
+          "Template": "select \r\n    *\r\nfrom ContentItemIndex \r\nwhere Published = true and ContentType = 'Project'\r\norder by DefaultPrice desc",
+          "ReturnDocuments": false,
+          "Name": "ProjectsAllSQL",
+          "Source": "Sql"
+        },
+        {
+          "Template": "select \r\n    DocumentId\r\nfrom ContentItemIndex \r\nwhere Published = true and ContentType = 'Project'\r\norder by DefaultPrice asc",
+          "ReturnDocuments": true,
+          "Name": "ProjectsAllItemsSQL",
+          "Source": "Sql"
+        }
+      ]
+    }
+  ]
+}
