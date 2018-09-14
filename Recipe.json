@@ -60,8 +60,8 @@
                 "Placeholder": "min. 100",
                 "DefaultValue": "100",
                 "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
+                  "Included": true,
+                  "Stored": true,
                   "Analyzed": false,
                   "Sanitized": false,
                   "Tokenized": false,
@@ -196,26 +196,26 @@
       "Queries": [
         {
           "Index": "Search",
-          "Template": "{\r\n  \"query\": {\r\n    \"term\" : { \"Content.ContentItem.ContentType\" : \"Project\" } \r\n  },\r\n  \"sort\": { \"Content.ContentItem.DefaultPrice\": { \"order\": \"desc\" } }\r\n}",
+          "Template": "{\r\n  \"query\": {\r\n    \"term\" : { \"Content.ContentItem.ContentType\" : \"Project\" } \r\n  },\r\n  \"sort\": { \"Project.DefaultPrice\": { \"order\": \"desc\" } }\r\n}",
           "ReturnContentItems": false,
           "Name": "ProjectsAll",
           "Source": "Lucene"
         },
         {
           "Index": "Search",
-          "Template": "{\r\n  \"query\": {\r\n    \"term\" : { \"Content.ContentItem.ContentType\" : \"Project\" } \r\n  },\r\n  \"sort\": { \"Content.ContentItem.DefaultPrice\": { \"order\": \"desc\" } }\r\n}",
+          "Template": "{\r\n  \"query\": {\r\n    \"term\" : { \"Content.ContentItem.ContentType\" : \"Project\" } \r\n  },\r\n  \"sort\": { \"Project.DefaultPrice\": { \"order\": \"desc\" } }\r\n}",
           "ReturnContentItems": true,
           "Name": "ProjectsAllItems",
           "Source": "Lucene"
         },
         {
-          "Template": "select \r\n    *\r\nfrom ContentItemIndex \r\nwhere Published = true and ContentType = 'Project'\r\norder by DefaultPrice desc",
+          "Template": "select \r\n    *\r\nfrom ContentItemIndex \r\nwhere Published = true and ContentType = 'Project'\r\n",
           "ReturnDocuments": false,
           "Name": "ProjectsAllSQL",
           "Source": "Sql"
         },
         {
-          "Template": "select \r\n    DocumentId\r\nfrom ContentItemIndex \r\nwhere Published = true and ContentType = 'Project'\r\norder by DefaultPrice asc",
+          "Template": "select \r\n    DocumentId\r\nfrom ContentItemIndex \r\nwhere Published = true and ContentType = 'Project'\r\n",
           "ReturnDocuments": true,
           "Name": "ProjectsAllItemsSQL",
           "Source": "Sql"
