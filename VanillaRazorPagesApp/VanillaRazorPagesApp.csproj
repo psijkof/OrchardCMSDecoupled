@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-beta3-68457" />
   </ItemGroup>
 
 </Project>

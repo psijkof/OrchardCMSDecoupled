@@ -11,6 +11,10 @@
     <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-beta3-68457" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\VanillaModule.OrchardCore\VanillaModule.OrchardCore.csproj" />
+    <ProjectReference Include="..\VanillaRazorPagesApp\VanillaRazorPagesApp.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Update="Pages\_ViewImports.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
