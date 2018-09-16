@@ -17,7 +17,7 @@
         <partial name="Shared/RenderFigure" model="@projectItem" />
     }
 
-    <h1>Our project offerings: (sql queries)</h1>
+    @*<h1>Our project offerings: (sql queries)</h1>
     <strong>Query name: ProjectsAllSQL return Ids and meta</strong>
     foreach (dynamic projectItem in await Orchard.QueryAsync("ProjectsAllSQL"))
     {
@@ -28,5 +28,5 @@
     foreach (dynamic projectItem in await Orchard.QueryAsync("ProjectsAllItemsSQL"))
     {
         <partial name="Shared/RenderFigure" model="@projectItem" />
-    }
+    }*@
 }

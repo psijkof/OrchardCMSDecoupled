@@ -14,10 +14,4 @@
     <ProjectReference Include="..\VanillaModule.OrchardCore\VanillaModule.OrchardCore.csproj" />
     <ProjectReference Include="..\VanillaRazorPagesApp\VanillaRazorPagesApp.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Update="Pages\_ViewImports.cshtml">
-      <Pack>$(IncludeRazorContentInPack)</Pack>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
 </Project>
